@@ -1,0 +1,47 @@
+
+
+@layout('layouts.admin')
+
+@section('content')
+<div class="container-fluid">
+    <br>
+
+    <h2 class="text-center">Dates</h2>
+
+    <hr>
+
+    <div class="row">
+        <div class="col text-center">
+            <a href="/dash/date/create" class="btn btn-primary">New Date</a>
+        </div>
+    </div>
+
+    <hr>
+</div>
+
+
+<div class="container">
+
+        @each(date in dates)
+            <div class="row row-striped">
+              <div class="col-lg-2 col-md-2 col-sm-12 text-center">
+                <h1 class="display-4"><span class="badge badge-secondary">{{date.date}}</span></h1>
+                <h2>{{date.month}}</h2>
+              </div>
+              <div class="col-10">
+                <h3 class="text-uppercase"><strong>{{date.title}}</strong></h3>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><i class="fa fa-calendar-o" aria-hidden="true"></i>{{date.day}}</li>
+                  <li class="list-inline-item"><i class="fa fa-clock-o" aria-hidden="true"></i> {{date.time}} </li>
+                  <li class="list-inline-item"><i class="fa fa-location-arrow" aria-hidden="true"></i>{{date.class}}</li>
+                </ul>
+                <p>{{date.description}}</p>
+              </div>
+            </div>
+            <br>
+        @endeach
+
+</div>
+          
+          
+@endsection

@@ -1,0 +1,46 @@
+@layout('layouts.admin')
+
+@section('content')
+
+<div class="container-fluid">
+        <br>
+    
+        <h2 class="text-center">Dashboard</h2>
+    
+        <hr>
+    
+       
+    
+        <hr>
+    </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Add Dates</h5>
+                    <p class="card-text">Add an event for parents to see on the front page of the website.</p>
+                    <a href="/dash/date/create" class="btn btn-primary">New Date</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Parent Members: Coming Soon</h5>
+                    <p class="card-text">Administrators will soon be able to create special parent accounts which will filter events, provide contact for broadcasts, and more.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col"><a href="users/logout" class="btn btn-secondary">Logout</a></div>
+        <div class="col"></div>
+    </div>
+    
+</div>
+
+@endsection
